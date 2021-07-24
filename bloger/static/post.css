@@ -1,0 +1,17 @@
+#r{
+    width: 50px;
+
+}
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+	#r{
+        visibility: hidden;
+    }
+    #s{
+    visibility: hidden;
+
+}
+}
+#s{
+    width: 50px;
+
+}
