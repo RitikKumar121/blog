@@ -50,7 +50,7 @@ def handleSignUp(request):
         username=request.POST['username']
         email=request.POST['email']
         fname=request.POST['fname']
-        lname=request.POST['lname']
+
         pass1=request.POST['pass1']
         pass2=request.POST['pass2']
 
@@ -67,7 +67,7 @@ def handleSignUp(request):
         # Create the user
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name= fname
-        myuser.last_name= lname
+    
         myuser.save()
         messages.success(request, " Your iCoder has been successfully created")
         return redirect('home')
@@ -95,4 +95,3 @@ def handelLogout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('home')
-
